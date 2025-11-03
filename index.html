@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>电子证书生成</title>
+  <!-- <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/2.1.1/jquery.min.js"></script> -->
+  <!-- <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/xlsx/0.18.2/xlsx.full.min.js"></script> -->
+  
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script type="text/javascript">
+    loopy();
+    function loopy() {
+      var sWord =""
+      while (sWord != "password123") {
+        sWord = prompt("请输入密码")
+      }
+    }
+   </script>
+</head>
+
+<body>
+  <canvas hidden id="myCanVas" width="2800px" height="3960px"></canvas>
+	<pre>
+    <h5>志愿者证书</h5>
+    请输入姓名:
+    <input type="text" placeholder="张三" id="name1">
+    请输入时长:
+    <input type="text" placeholder="10" id="hour">
+    请选择日期:
+    <input type="date" id="date1">
+    生成图片需耐心等待几秒
+    <button onclick="volunteer('myCanVas')" id="btn1">生成图片</button>
+
+    <h5>捐赠者证书</h5>
+    请输入姓名:
+    <input type="text" placeholder="李四" id="name2">
+    请输入物资:
+    <input type="text" placeholder="矿泉水" id="goods_cn">
+    <input type="text" placeholder="mineral water" id="goods_en">
+    请选择日期:
+    <input type="date" id="date2">
+    生成图片需耐心等待几秒
+    <button onclick="donation('myCanVas')" id="btn2">生成图片</button>
+
+    <!-- <h5>导出记录</h5> -->
+    <!-- <button onclick="export_excel()" id="export">导出记录</button> -->
+  </pre>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
